@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Primary Meta Tags -->
+  <title>Sankhadeep Ganguly | Computer Engineer & Co-Founder @ Near Hai</title>
+  <meta name="title" content="Sankhadeep Ganguly | Computer Engineer & Co-Founder @ Near Hai">
+  <meta name="description" content="Portfolio of Sankhadeep Ganguly - Computer Engineering student at Chandigarh University, Co-Founder of Near Hai, Microsoft Azure AI-900 & Oracle Cloud Certified Architect, and National Hackathon Finalist.">
+  <meta name="keywords" content="Sankhadeep Ganguly, Near Hai, Chandigarh University, Computer Engineer, AI Developer, Oracle Cloud Architect, Azure AI-900, India Innovates, IIT Delhi Hackathon">
+  <meta name="author" content="Sankhadeep Ganguly">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sankhadeep Ganguly | Computer Engineer & AI Developer">
+  <meta property="og:description" content="Explore projects, startups, certifications (OCI, Azure AI), and achievements of Sankhadeep Ganguly.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <!-- Ambient Light Mesh Background -->
+  <div class="ambient-glow ambient-glow-1"></div>
+  <div class="ambient-glow ambient-glow-2"></div>
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- ==========================================================================
+       Header / Navigation Bar
+       ========================================================================== -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-brand">
+        <div class="brand-icon">SG</div>
+        <span>Sankhadeep.dev</span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#certifications" class="nav-link">Certifications</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Terminal / Command Palette Trigger -->
+        <button class="btn-command-palette open-terminal-btn" title="Open Command Palette (Ctrl+K)">
+          <span>⌨️</span>
+          <span>CLI</span>
+          <kbd>Ctrl+K</kbd>
+        </button>
+
+        <!-- Theme Toggle -->
+        <button class="icon-btn" id="theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme">
+          <span id="theme-icon">☀️</span>
+        </button>
+
+        <!-- Resume Modal Trigger -->
+        <button class="btn btn-outline btn-sm open-resume-btn" id="view-resume-btn">
+          <span>Resume</span> 📄
+        </button>
+
+        <!-- Mobile Toggle -->
+        <button class="icon-btn mobile-toggle" id="mobile-menu-toggle" aria-label="Open navigation menu">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       Hero Section
+       ========================================================================== -->
+  <section class="hero-section" id="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text-block">
+          <div class="hero-status-badge">
+            <span class="pulse-dot"></span>
+            <span>Available for Tech & AI Roles / Collabs</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Sankhadeep Ganguly</span>
+          </h1>
+
+          <div class="hero-typewriter">
+            <span>I build</span>
+            <span class="gradient-text" id="typed-text"></span>
+            <span class="typed-cursor">|</span>
+          </div>
+
+          <p class="hero-desc">
+            Enthusiastic Computer Engineering student at Chandigarh University with expertise in C++, Python, and Web Technologies. Co-founder of <strong>Near Hai</strong>, Oracle & Azure AI Certified, and national-level hackathon finalist building scalable, intelligent solutions.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">
+              <span>Explore My Work</span> 🚀
+            </a>
+            <button class="btn btn-outline open-resume-btn">
+              <span>View Resume</span> 📄
+            </button>
+            <a href="#contact" class="btn btn-outline">
+              <span>Get in Touch</span> ✉️
+            </a>
+          </div>
+
+          <div class="hero-socials">
+            <a href="https://github.com/Sankh996" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub Profile">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/sankhadeep-ganguly-8612a0269/" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn Profile">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="mailto:sankhadeepganguly4@gmail.com" class="social-link" title="Email Sankhadeep">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </a>
+            <a href="tel:+918167274648" class="social-link" title="Phone Call">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Avatar Card -->
+        <div class="hero-visual">
+          <div class="hero-avatar-card tilt-card">
+            <!-- Floating Accreditations -->
+            <div class="floating-pill pill-1">
+              <span class="pill-dot-azure"></span>
+              <span>Azure AI-900 Certified</span>
+            </div>
+            <div class="floating-pill pill-2">
+              <span class="pill-dot-oci"></span>
+              <span>OCI Multicloud Architect</span>
+            </div>
+
+            <div class="avatar-wrapper">
+              <img src="assets/images/profile.png" alt="Sankhadeep Ganguly - Profile Photo" class="avatar-image" onerror="this.style.display='none'; document.getElementById('avatar-fallback').style.display='flex';">
+              <div id="avatar-fallback" class="avatar-initials-fallback" style="display: none;">SG</div>
+            </div>
+
+            <div class="avatar-info">
+              <h3>Sankhadeep Ganguly</h3>
+              <p>B.E. CSE @ Chandigarh University</p>
+              <div class="tech-badges-row">
+                <span class="tech-badge">C++</span>
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">AI / ML</span>
+                <span class="tech-badge">Cloud</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Stats Bar -->
+      <div class="hero-stats-grid">
+        <div class="glass-card stat-card">
+          <div class="stat-icon">🏆</div>
+          <div>
+            <div class="stat-number">Top Finalist</div>
+            <div class="stat-label">25,000+ Teams (Bharat Mandapam)</div>
+          </div>
+        </div>
+        <div class="glass-card stat-card">
+          <div class="stat-icon">🥈</div>
+          <div>
+            <div class="stat-number">Top 600+</div>
+            <div class="stat-label">Square Hack (IIT Delhi)</div>
+          </div>
+        </div>
+        <div class="glass-card stat-card">
+          <div class="stat-icon">📜</div>
+          <div>
+            <div class="stat-number">2x Certified</div>
+            <div class="stat-label">Oracle Cloud & Microsoft Azure</div>
+          </div>
+        </div>
+        <div class="glass-card stat-card">
+          <div class="stat-icon">💡</div>
+          <div>
+            <div class="stat-number">Co-Founder</div>
+            <div class="stat-label">Near Hai Hyperlocal Platform</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       About Section
+       ========================================================================== -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">About Me</span>
+        <h2 class="section-title">Driven by Curiosity, Built for <span class="gradient-text">Innovation</span></h2>
+        <p class="section-subtitle">A glimpse into my background, engineering philosophy, and the technology domains I specialize in.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text glass-card">
+          <h3 style="font-size: 1.4rem; margin-bottom: 1rem;">Bridging Algorithms with Real-World Impact</h3>
+          <p>
+            I am a Computer Science & Engineering undergraduate at Chandigarh University (2025–2029) with a passion for software craftsmanship, Artificial Intelligence, and scalable system design.
+          </p>
+          <p>
+            From co-founding <strong>Near Hai</strong>—a digital mapping and hyperlocal platform presented at Bharat Mandapam—to leading AI agricultural defense systems at <strong>IIT Delhi's Square Hack</strong>, I thrive at the intersection of rapid prototyping, data structures, and practical user utility.
+          </p>
+          <p>
+            With dual professional cloud certifications from Oracle and Microsoft, I architect clean, robust, and future-proof systems.
+          </p>
+
+          <div class="quick-facts-grid">
+            <div class="fact-item">
+              <span class="fact-title">Degree</span>
+              <span class="fact-value">B.E. Computer Science & Eng.</span>
+            </div>
+            <div class="fact-item">
+              <span class="fact-title">University</span>
+              <span class="fact-value">Chandigarh University, Mohali</span>
+            </div>
+            <div class="fact-item">
+              <span class="fact-title">Specialization</span>
+              <span class="fact-value">AI, Cloud & Full Stack Systems</span>
+            </div>
+            <div class="fact-item">
+              <span class="fact-title">Location</span>
+              <span class="fact-value">Punjab / West Bengal, India</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pillars-grid">
+          <div class="glass-card pillar-card">
+            <div class="pillar-icon cyan">🧠</div>
+            <h4>Artificial Intelligence & ML</h4>
+            <p>Developing image classification, NLP pipelines, and conversational models with Python, Teachable Machine, and Deep Learning principles.</p>
+          </div>
+
+          <div class="glass-card pillar-card">
+            <div class="pillar-icon violet">🌐</div>
+            <h4>Hyperlocal Web & Systems</h4>
+            <p>Building interactive digital maps, location-based services, and real-time data frameworks for urban connectivity.</p>
+          </div>
+
+          <div class="glass-card pillar-card">
+            <div class="pillar-icon emerald">☁️</div>
+            <h4>Cloud Architecture</h4>
+            <p>Certified in Oracle Cloud Infrastructure Multicloud Architecture and Azure AI-900 fundamentals for enterprise scale.</p>
+          </div>
+
+          <div class="glass-card pillar-card">
+            <div class="pillar-icon amber">⚡</div>
+            <h4>IoT & Embedded Systems</h4>
+            <p>Designing smart city automation and energy optimization solutions using Arduino, motion sensors, and microcontrollers.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Experience & Hackathons Section
+       ========================================================================== -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Journey & Impact</span>
+        <h2 class="section-title">Experience & <span class="gradient-text">Hackathons</span></h2>
+        <p class="section-subtitle">Startups built, teams led, and national stages graced with high-impact software prototypes.</p>
+      </div>
+
+      <div class="timeline">
+        <!-- Item 1: Near Hai -->
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="glass-card timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-badge">Co-Founder & Lead</span>
+              <span class="timeline-date">February 2026 – Present</span>
+            </div>
+            <h3 class="timeline-title">Near Hai – Hyperlocal Discovery Platform</h3>
+            <p class="timeline-subtitle">Finalist - India Innovates Startup Hackathon by Delhi Municipal Corporation (Bharat Mandapam, Pragati Maidan, New Delhi)</p>
+            <ul class="timeline-bullets">
+              <li>Developed a hyperlocal discovery platform that connects users with nearby shops, services, transit, and events using an interactive digital map.</li>
+              <li>Designed and contributed to UI and data framework for real-time location-based interaction.</li>
+              <li>Collaborated with a team of 5 to engineer a scalable prototype for urban local discovery.</li>
+              <li>Presented the startup on a national stage at Bharat Mandapam before industry judges and government dignitaries.</li>
+              <li>Focused on boosting accessibility and real-time information retrieval across dynamic local markets.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tech-badge">Interactive Map</span>
+              <span class="tech-badge">Geolocation APIs</span>
+              <span class="tech-badge">UI/UX Framework</span>
+              <span class="tech-badge">Startup Finalist (25k+ teams)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2: Square Hack IIT Delhi -->
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="glass-card timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-badge hackathon">Team Lead & Finalist</span>
+              <span class="timeline-date">December 2025</span>
+            </div>
+            <h3 class="timeline-title">Square Hack 2025 – IIT Delhi Hackathon</h3>
+            <p class="timeline-subtitle">Finalist among 600+ teams (Organized by The Tale of Humankind and Ashoka Innovators, New Delhi)</p>
+            <ul class="timeline-bullets">
+              <li>Led a dedicated engineering team of 4 in building a software-based <strong>Soil Monitoring and Fake Fertilizer Detection System</strong>.</li>
+              <li>Trained and integrated AI models using Google Teachable Machine to accurately identify soil types and determine pH levels.</li>
+              <li>Engineered a QR Code verification and scanning system in the software prototype to differentiate authentic vs counterfeit fertilizer packages for farmers.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">Google Teachable Machine</span>
+              <span class="tech-badge">Computer Vision</span>
+              <span class="tech-badge">QR Security</span>
+              <span class="tech-badge">Top 600+ Teams</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3: Tata Crucible -->
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="glass-card timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-badge">Academic Milestone</span>
+              <span class="timeline-date">2025</span>
+            </div>
+            <h3 class="timeline-title">Tata Crucible Campus Quiz</h3>
+            <p class="timeline-subtitle">Participant – India's Premier Business & Knowledge Competition</p>
+            <p style="color: var(--text-secondary); font-size: 0.95rem;">
+              Competed among top college students across India in strategic business aptitude, technology trends, and economic intelligence.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Projects Showcase Section
+       ========================================================================== -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Featured Work</span>
+        <h2 class="section-title">Projects & <span class="gradient-text">Innovations</span></h2>
+        <p class="section-subtitle">Explore selected startup prototypes, AI applications, and embedded hardware systems.</p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="projects-filter">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="startup">Startups & Web</button>
+        <button class="filter-btn" data-filter="ai">AI & Machine Learning</button>
+        <button class="filter-btn" data-filter="iot">IoT & Hardware</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid">
+        <!-- Project 1: Near Hai -->
+        <div class="glass-card project-card tilt-card" data-category="startup all">
+          <div class="project-banner">
+            <div class="project-banner-icon">🗺️</div>
+          </div>
+          <div class="project-header">
+            <h3 class="project-title">Near Hai</h3>
+            <span class="project-category">Startup</span>
+          </div>
+          <p class="project-desc">
+            A real-time hyperlocal discovery platform connecting residents with local shops, emergency services, transport hubs, and community events on an interactive map.
+          </p>
+          <div class="project-tech-stack">
+            <span class="tech-badge">Web Dev</span>
+            <span class="tech-badge">Geolocation</span>
+            <span class="tech-badge">Real-Time UI</span>
+            <span class="tech-badge">Interactive Map</span>
+          </div>
+          <div class="project-footer">
+            <button class="btn btn-outline btn-sm view-project-details-btn" data-project="nearhai">
+              <span>View Details</span> 🔍
+            </button>
+            <div class="project-links">
+              <a href="https://github.com/Sankh996" target="_blank" class="social-link" title="GitHub">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: AgriAI Soil & Fertilizer -->
+        <div class="glass-card project-card tilt-card" data-category="ai all">
+          <div class="project-banner">
+            <div class="project-banner-icon">🌱</div>
+          </div>
+          <div class="project-header">
+            <h3 class="project-title">AgriAI Soil & Fertilizer Detector</h3>
+            <span class="project-category">AI / Vision</span>
+          </div>
+          <p class="project-desc">
+            Computer vision & AI model analyzing soil pH quality combined with anti-counterfeit QR scanner to safeguard farmers against fake agricultural chemicals.
+          </p>
+          <div class="project-tech-stack">
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">Teachable Machine</span>
+            <span class="tech-badge">Computer Vision</span>
+            <span class="tech-badge">QR Auth</span>
+          </div>
+          <div class="project-footer">
+            <button class="btn btn-outline btn-sm view-project-details-btn" data-project="agriai">
+              <span>View Details</span> 🔍
+            </button>
+            <div class="project-links">
+              <a href="https://github.com/Sankh996" target="_blank" class="social-link" title="GitHub">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Smart Street Lighting -->
+        <div class="glass-card project-card tilt-card" data-category="iot all">
+          <div class="project-banner">
+            <div class="project-banner-icon">💡</div>
+          </div>
+          <div class="project-header">
+            <h3 class="project-title">Smart Street Lighting System</h3>
+            <span class="project-category">IoT / Embedded</span>
+          </div>
+          <p class="project-desc">
+            Automated embedded smart lighting system using Arduino and IR sensors to dynamically trigger lights on vehicle detection, curbing urban power wastage.
+          </p>
+          <div class="project-tech-stack">
+            <span class="tech-badge">Arduino</span>
+            <span class="tech-badge">C/C++</span>
+            <span class="tech-badge">IR Sensors</span>
+            <span class="tech-badge">Smart City</span>
+          </div>
+          <div class="project-footer">
+            <button class="btn btn-outline btn-sm view-project-details-btn" data-project="smartlights">
+              <span>View Details</span> 🔍
+            </button>
+            <div class="project-links">
+              <a href="https://github.com/Sankh996" target="_blank" class="social-link" title="GitHub">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Skills & Tech Stack Section
+       ========================================================================== -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Proficiencies</span>
+        <h2 class="section-title">Technical <span class="gradient-text">Skills & Arsenal</span></h2>
+        <p class="section-subtitle">Core tools, programming languages, and frameworks used in building modern software.</p>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Category 1: Languages -->
+        <div class="glass-card skill-category-card">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">💻</div>
+            <h3 style="font-size: 1.15rem;">Languages</h3>
+          </div>
+          <div class="skill-items-list">
+            <div class="skill-item"><span>C / C++</span><span style="color:var(--accent-cyan); font-family:var(--font-mono); font-size:0.8rem;">Advanced</span></div>
+            <div class="skill-item"><span>Python</span><span style="color:var(--accent-cyan); font-family:var(--font-mono); font-size:0.8rem;">Proficient</span></div>
+            <div class="skill-item"><span>HTML5 & CSS3</span><span style="color:var(--accent-cyan); font-family:var(--font-mono); font-size:0.8rem;">Proficient</span></div>
+            <div class="skill-item"><span>JavaScript</span><span style="color:var(--accent-cyan); font-family:var(--font-mono); font-size:0.8rem;">Modern ES6+</span></div>
+          </div>
+        </div>
+
+        <!-- Category 2: AI & ML -->
+        <div class="glass-card skill-category-card">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">🤖</div>
+            <h3 style="font-size: 1.15rem;">AI & Machine Learning</h3>
+          </div>
+          <div class="skill-items-list">
+            <div class="skill-item"><span>Natural Language Proc. (NLP)</span><span style="color:var(--accent-violet);">Core</span></div>
+            <div class="skill-item"><span>Deep Learning</span><span style="color:var(--accent-violet);">Applied</span></div>
+            <div class="skill-item"><span>Computer Vision</span><span style="color:var(--accent-violet);">Models</span></div>
+            <div class="skill-item"><span>Generative & Conversational AI</span><span style="color:var(--accent-violet);">LLMs</span></div>
+            <div class="skill-item"><span>Google Teachable Machine</span><span style="color:var(--accent-violet);">Vision</span></div>
+          </div>
+        </div>
+
+        <!-- Category 3: Cloud & DevOps -->
+        <div class="glass-card skill-category-card">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">☁️</div>
+            <h3 style="font-size: 1.15rem;">Cloud & DevOps</h3>
+          </div>
+          <div class="skill-items-list">
+            <div class="skill-item"><span>Oracle Cloud Infrastructure</span><span style="color:var(--accent-emerald);">Certified Pro</span></div>
+            <div class="skill-item"><span>Microsoft Azure (AI-900)</span><span style="color:var(--accent-emerald);">Certified</span></div>
+            <div class="skill-item"><span>Git & GitHub</span><span style="color:var(--accent-emerald);">Version Ctrl</span></div>
+            <div class="skill-item"><span>Multicloud Architecture</span><span style="color:var(--accent-emerald);">Design</span></div>
+          </div>
+        </div>
+
+        <!-- Category 4: Core CS & Tools -->
+        <div class="glass-card skill-category-card">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">🛠️</div>
+            <h3 style="font-size: 1.15rem;">Core CS & Tools</h3>
+          </div>
+          <div class="skill-items-list">
+            <div class="skill-item"><span>Data Structures & Algorithms</span><span style="color:var(--accent-amber);">DSA</span></div>
+            <div class="skill-item"><span>Object-Oriented Programming</span><span style="color:var(--accent-amber);">OOP</span></div>
+            <div class="skill-item"><span>VS Code</span><span style="color:var(--accent-amber);">IDE</span></div>
+            <div class="skill-item"><span>Arduino IDE & Embedded IoT</span><span style="color:var(--accent-amber);">Hardware</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Certifications & Accolades Section
+       ========================================================================== -->
+  <section id="certifications">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Accreditations</span>
+        <h2 class="section-title">Certifications & <span class="gradient-text">Honors</span></h2>
+        <p class="section-subtitle">Officially verified cloud certifications and competitive hackathon recognitions.</p>
+      </div>
+
+      <!-- Certifications Cards -->
+      <div class="cert-grid">
+        <!-- Azure AI-900 -->
+        <div class="glass-card cert-card tilt-card">
+          <div class="cert-badge-logo cert-badge-azure">
+            ⚡
+          </div>
+          <div class="cert-info">
+            <h4>Microsoft Certified: Azure AI-900</h4>
+            <div class="cert-issuer">Microsoft Azure AI Fundamentals</div>
+            <div class="cert-date">Issued: February 2026</div>
+            <span class="cert-status-badge">✓ Verified Credential</span>
+          </div>
+        </div>
+
+        <!-- Oracle OCI Architect -->
+        <div class="glass-card cert-card tilt-card">
+          <div class="cert-badge-logo cert-badge-oci">
+            ☁️
+          </div>
+          <div class="cert-info">
+            <h4>OCI 2025 Multicloud Architect Professional</h4>
+            <div class="cert-issuer">Oracle Cloud Infrastructure</div>
+            <div class="cert-date">Issued: October 2025</div>
+            <span class="cert-status-badge">✓ Certified Professional</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Honors & Achievements Cards -->
+      <div class="achievements-grid">
+        <div class="glass-card achievement-card">
+          <div class="achievement-icon">🏛️</div>
+          <div class="achievement-content">
+            <h4>National Finalist @ Bharat Mandapam</h4>
+            <p>Selected as Finalist among <strong>25,000+</strong> registered teams in India Innovates Startup Hackathon organized by Delhi Municipal Corporation (Pragati Maidan, New Delhi).</p>
+          </div>
+        </div>
+
+        <div class="glass-card achievement-card">
+          <div class="achievement-icon">🎓</div>
+          <div class="achievement-content">
+            <h4>Finalist @ Square Hack – IIT Delhi</h4>
+            <p>Selected as Finalist among <strong>600+</strong> teams in Square Hack 2025 organized by The Tale of Humankind and Ashoka Innovators.</p>
+          </div>
+        </div>
+
+        <div class="glass-card achievement-card">
+          <div class="achievement-icon">🏆</div>
+          <div class="achievement-content">
+            <h4>Tata Crucible Campus Quiz</h4>
+            <p>Competed in India's highest-tier intercollegiate business and intelligence championship.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Education Section
+       ========================================================================== -->
+  <section id="education">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Academics</span>
+        <h2 class="section-title">Educational <span class="gradient-text">Background</span></h2>
+        <p class="section-subtitle">Formal foundation in Computer Science, Mathematics, and Physical Sciences.</p>
+      </div>
+
+      <div class="education-grid">
+        <!-- Higher Education -->
+        <div class="glass-card edu-card tilt-card">
+          <div class="edu-badge-score">CGPA 6.7</div>
+          <div class="edu-period">2025 – 2029</div>
+          <h3 class="edu-degree">Bachelors of Engineering, Computer Science (CSE)</h3>
+          <div class="edu-institution">Chandigarh University</div>
+          <div class="edu-location">📍 Mohali, Punjab</div>
+        </div>
+
+        <!-- 12th -->
+        <div class="glass-card edu-card tilt-card">
+          <div class="edu-badge-score">84.6%</div>
+          <div class="edu-period">2023 – 2025</div>
+          <h3 class="edu-degree">Higher Secondary XIIth (PCMB)</h3>
+          <div class="edu-institution">Nigamnagar Nigamananda Sevashram High School</div>
+          <div class="edu-location">📍 Adra, Purulia, West Bengal</div>
+        </div>
+
+        <!-- 10th -->
+        <div class="glass-card edu-card tilt-card">
+          <div class="edu-badge-score">90.0%</div>
+          <div class="edu-period">2023 – 2025</div>
+          <h3 class="edu-degree">Madhyamik Xth</h3>
+          <div class="edu-institution">South Eastern Railway Boys' High School</div>
+          <div class="edu-location">📍 Adra, Purulia, West Bengal</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Contact Hub Section
+       ========================================================================== -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Get In Touch</span>
+        <h2 class="section-title">Let's Connect & <span class="gradient-text">Collaborate</span></h2>
+        <p class="section-subtitle">Have a project, startup idea, or technical opportunity? Drop a message or reach out directly.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Info Cards -->
+        <div class="contact-info-panel">
+          <div class="glass-card contact-card-item">
+            <div class="contact-icon-box">✉️</div>
+            <div class="contact-details">
+              <h4>Email Address</h4>
+              <p>sankhadeepganguly4@gmail.com</p>
+            </div>
+            <button class="copy-btn copy-email-btn" title="Copy Email">Copy</button>
+          </div>
+
+          <div class="glass-card contact-card-item">
+            <div class="contact-icon-box">📞</div>
+            <div class="contact-details">
+              <h4>Direct Mobile</h4>
+              <p>+91 8167274648</p>
+            </div>
+            <a href="tel:+918167274648" class="copy-btn" style="text-decoration:none;">Call</a>
+          </div>
+
+          <div class="glass-card contact-card-item">
+            <div class="contact-icon-box">💼</div>
+            <div class="contact-details">
+              <h4>LinkedIn Profile</h4>
+              <p>sankhadeep-ganguly-8612a0269</p>
+            </div>
+            <a href="https://www.linkedin.com/in/sankhadeep-ganguly-8612a0269/" target="_blank" class="copy-btn" style="text-decoration:none;">Visit ↗</a>
+          </div>
+
+          <div class="glass-card contact-card-item">
+            <div class="contact-icon-box">🐙</div>
+            <div class="contact-details">
+              <h4>GitHub Profile</h4>
+              <p>github.com/Sankh996</p>
+            </div>
+            <a href="https://github.com/Sankh996" target="_blank" class="copy-btn" style="text-decoration:none;">Visit ↗</a>
+          </div>
+        </div>
+
+        <!-- Interactive Contact Form -->
+        <div class="glass-card contact-form-panel">
+          <h3 style="font-size: 1.35rem; margin-bottom: 1.25rem;">Send a Direct Note</h3>
+          <form id="portfolio-contact-form">
+            <div class="form-group">
+              <label for="form-name" class="form-label">Your Full Name *</label>
+              <input type="text" id="form-name" class="form-input" placeholder="e.g. Alex Sharma" required>
+            </div>
+
+            <div class="form-group">
+              <label for="form-email" class="form-label">Email Address *</label>
+              <input type="email" id="form-email" class="form-input" placeholder="alex@company.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="form-subject" class="form-label">Subject</label>
+              <input type="text" id="form-subject" class="form-input" placeholder="Collaboration / Job Opportunity / Project Discussion">
+            </div>
+
+            <div class="form-group">
+              <label for="form-message" class="form-label">Message *</label>
+              <textarea id="form-message" class="form-textarea" placeholder="Describe your inquiry, project scope, or opportunity..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              <span>Send Message</span> 🚀
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Footer
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="nav-brand">
+        <div class="brand-icon">SG</div>
+        <span>Sankhadeep Ganguly</span>
+      </div>
+
+      <ul class="footer-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <p class="footer-copyright">
+        Designed & Built by Sankhadeep Ganguly © 2026. Built for high performance, modern web accessibility & elegance.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       Floating Back To Top Button
+       ========================================================================== -->
+  <button id="back-to-top" class="back-to-top" title="Back to top" aria-label="Back to top">
+    ↑
+  </button>
+
+  <!-- ==========================================================================
+       Project Deep-Dive Modal
+       ========================================================================== -->
+  <div class="modal-overlay" id="project-modal">
+    <div class="modal-container">
+      <button class="modal-close" id="modal-close-btn" aria-label="Close modal">✕</button>
+      <div id="project-modal-body">
+        <!-- Dynamically injected via app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Developer Terminal / Command Palette Modal (Ctrl+K)
+       ========================================================================== -->
+  <div class="modal-overlay" id="terminal-modal">
+    <div class="modal-container terminal-modal-container">
+      <div class="terminal-header">
+        <div class="terminal-dots">
+          <span class="term-dot red"></span>
+          <span class="term-dot yellow"></span>
+          <span class="term-dot green"></span>
+        </div>
+        <div class="terminal-title">sankhadeep-portfolio-cli v2.0</div>
+        <button class="modal-close" id="terminal-close-btn" style="position:static; width:28px; height:28px; font-size:0.9rem;" aria-label="Close terminal">✕</button>
+      </div>
+      <div class="terminal-body">
+        <div id="terminal-output" class="terminal-output">
+          <div style="color: #7ee787;">Welcome to Sankhadeep's Interactive Command Line!</div>
+          <div style="color: #8b949e; margin-bottom: 0.75rem;">Type <span style="color:#58a6ff">help</span> to view available commands. Press <kbd style="background:#21262d; padding:2px 4px; border-radius:3px;">Esc</kbd> to close.</div>
+        </div>
+        <div class="terminal-input-row">
+          <span class="terminal-prompt">visitor@sankhadeep:~$</span>
+          <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" spellcheck="false" autofocus>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Interactive Resume Viewer Modal
+       ========================================================================== -->
+  <div class="modal-overlay" id="resume-modal">
+    <div class="modal-container" style="max-width: 860px; height: 90vh; display: flex; flex-direction: column; padding: 1.5rem;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+        <h3 style="font-size: 1.25rem;">📄 Sankhadeep Ganguly – Official Resume</h3>
+        <div style="display: flex; gap: 0.75rem; align-items: center;">
+          <a href="assets/resume.html" target="_blank" class="btn btn-primary btn-sm">
+            <span>Open in Full Tab / Print</span> 🖨️
+          </a>
+          <button class="modal-close" id="resume-close-btn" style="position:static;" aria-label="Close resume modal">✕</button>
+        </div>
+      </div>
+      <iframe src="assets/resume.html" style="width: 100%; height: 100%; border: 1px solid var(--border-glass); border-radius: var(--radius-sm); background:#fff;" title="Resume Preview"></iframe>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/particles.js"></script>
+  <script src="js/terminal.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
