@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sankhadeep Ganguly - Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --text-main: #111827;
+      --text-muted: #4b5563;
+      --accent: #0284c7;
+      --border: #e5e7eb;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      color: var(--text-main);
+      background-color: #f3f4f6;
+      padding: 2rem 1rem;
+      line-height: 1.5;
+    }
+
+    .resume-actions-bar {
+      max-width: 800px;
+      margin: 0 auto 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .btn {
+      padding: 0.6rem 1.25rem;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s;
+    }
+
+    .btn-print {
+      background: #0284c7;
+      color: #fff;
+    }
+
+    .btn-back {
+      background: #fff;
+      color: #374151;
+      border: 1px solid #d1d5db;
+    }
+
+    .resume-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 3rem;
+      border-radius: 8px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    .resume-header {
+      text-align: center;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .name {
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .contact-links a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .section-title {
+      font-size: 1.1rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 1.5px solid #111827;
+      padding-bottom: 0.25rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.85rem;
+    }
+
+    p.summary-text {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    .entry {
+      margin-bottom: 1rem;
+    }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+
+    .entry-subheader {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      font-style: italic;
+      margin-bottom: 0.4rem;
+    }
+
+    .bullets {
+      list-style-type: disc;
+      padding-left: 1.25rem;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .bullets li {
+      margin-bottom: 0.35rem;
+      line-height: 1.45;
+    }
+
+    .skills-line {
+      font-size: 0.9rem;
+      margin-bottom: 0.45rem;
+    }
+
+    .skills-line strong {
+      color: var(--text-main);
+    }
+
+    @media print {
+      body {
+        background: #fff;
+        padding: 0;
+      }
+      .resume-actions-bar {
+        display: none !important;
+      }
+      .resume-container {
+        box-shadow: none;
+        padding: 0;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="resume-actions-bar">
+    <a href="../index.html" class="btn btn-back">← Back to Portfolio</a>
+    <button onclick="window.print()" class="btn btn-print">🖨️ Print / Save as PDF</button>
+  </div>
+
+  <main class="resume-container">
+    <header class="resume-header">
+      <h1 class="name">Sankhadeep Ganguly</h1>
+      <div class="contact-links">
+        <span><strong>Mobile:</strong> <a href="tel:+918167274648">+91 8167274648</a></span>
+        <span><strong>Email:</strong> <a href="mailto:sankhadeepganguly4@gmail.com">sankhadeepganguly4@gmail.com</a></span>
+      </div>
+      <div class="contact-links" style="margin-top: 0.4rem;">
+        <span><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sankhadeep-ganguly-8612a0269/" target="_blank">linkedin.com/in/sankhadeep-ganguly-8612a0269</a></span>
+        <span><strong>GitHub:</strong> <a href="https://github.com/Sankh996" target="_blank">github.com/Sankh996</a></span>
+      </div>
+    </header>
+
+    <section>
+      <h2 class="section-title">Summary</h2>
+      <p class="summary-text">
+        Enthusiastic computer engineering student with strong skills in C++, Python, and web development, along with working knowledge of Artificial Intelligence. Experienced in building real-world and scalable applications, including co-founding NearHai, a hyperlocal discovery platform, and contributing to national-level hackathons. Strong in problem-solving and data structures, with a focus on developing efficient and intelligent software systems.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="section-title">Education</h2>
+      <div class="entry">
+        <div class="entry-header">
+          <span>Bachelors of Engineering, Computer Science and Engineering (CSE)</span>
+          <span>2025 – 2029</span>
+        </div>
+        <div class="entry-subheader">
+          <span>Chandigarh University, Mohali (Punjab)</span>
+          <span>CGPA: 6.7 / 10.00</span>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="entry-header">
+          <span>Higher Secondary XIIth (PCMB)</span>
+          <span>2023 – 2025</span>
+        </div>
+        <div class="entry-subheader">
+          <span>Nigamnagar Nigamananda Sevashram High School, Adra, Dist: Purulia (WB)</span>
+          <span>Percentage: 84.6%</span>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="entry-header">
+          <span>Madhyamik Xth</span>
+          <span>2023 – 2025</span>
+        </div>
+        <div class="entry-subheader">
+          <span>South Eastern Railway Boys' High School, Adra, Dist: Purulia (WB)</span>
+          <span>Percentage: 90.0%</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Experience & Hackathons</h2>
+      <div class="entry">
+        <div class="entry-header">
+          <span>Co-Founder — Near Hai (Hyperlocal Discovery Platform)</span>
+          <span>February 2026 – Present</span>
+        </div>
+        <div class="entry-subheader">
+          <span>Finalist - India Innovates Startup Hackathon (Delhi Municipal Corp., Bharat Mandapam, New Delhi)</span>
+          <span>Top among 25,000+ teams</span>
+        </div>
+        <ul class="bullets">
+          <li>Developed a hyperlocal discovery platform connecting users with nearby shops, services, transport, and events using an interactive digital map.</li>
+          <li>Designed and contributed to UI and data framework for real-time location-based interaction.</li>
+          <li>Collaborated with a team of 5 to build a scalable prototype for urban local discovery.</li>
+          <li>Presented the startup at national level at Bharat Mandapam, Pragati Maidan.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span>Participant & Team Lead — Square Hack (IIT Delhi Hackathon)</span>
+          <span>December 2025</span>
+        </div>
+        <div class="entry-subheader">
+          <span>Finalist among 600+ teams (Organized by The Tale of Humankind and Ashoka Innovators)</span>
+          <span>New Delhi</span>
+        </div>
+        <ul class="bullets">
+          <li>Lead a team of 4 in making a software-based Soil Monitoring and Fake Fertilizer Detection System.</li>
+          <li>Used Google Teachable Machine to train AI models that detect soil classifications and analyze pH levels.</li>
+          <li>Engineered a QR Code verification scanner into the prototype to differentiate authentic vs fake fertilizer packaging.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Projects</h2>
+      <div class="entry">
+        <div class="entry-header">
+          <span>IoT-Based Smart Street Lighting System (Academic Project)</span>
+          <span>November 2025</span>
+        </div>
+        <div class="entry-subheader">
+          <span>Chandigarh University, Mohali (Punjab)</span>
+          <span>Arduino & Sensors</span>
+        </div>
+        <ul class="bullets">
+          <li>Developed an automated smart street lighting system using Arduino that dynamically activates illumination when vehicle movement is detected.</li>
+          <li>Implemented Infrared (IR) motion detection sensors to optimize energy consumption and prevent electricity wastage.</li>
+          <li>Demonstrated practical application of embedded IoT systems in smart city infrastructure.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Certifications & Achievements</h2>
+      <div class="skills-line">
+        <strong>Certificates:</strong> Microsoft Certified: Azure AI-900 Fundamentals (Feb 2026) | Oracle Certified: Oracle Cloud Infrastructure 2025 Multicloud Architect Professional (Oct 2025)
+      </div>
+      <div class="skills-line">
+        <strong>Achievements:</strong> Finalist among 25,000+ teams in India Innovates Startup Hackathon (Bharat Mandapam) | Finalist among 600+ teams in Square Hack 2025 (IIT Delhi) | Participant in Tata Crucible Campus Quiz.
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-line">
+        <strong>Programming Languages:</strong> C, C++, Python, JavaScript, HTML5, CSS3
+      </div>
+      <div class="skills-line">
+        <strong>AI & Machine Learning:</strong> Natural Language Processing, Deep Learning, Computer Vision, Generative AI, Conversational AI, Teachable Machine
+      </div>
+      <div class="skills-line">
+        <strong>Cloud Computing:</strong> Oracle Cloud Infrastructure (Certified), Microsoft Azure (AI-900 Certified)
+      </div>
+      <div class="skills-line">
+        <strong>Core Concepts & Tools:</strong> Data Structures & Algorithms, Object-Oriented Programming (OOP), VS Code, Arduino IDE
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
